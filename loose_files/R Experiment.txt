@@ -1,0 +1,231 @@
+
+R version 3.4.0 (2017-04-21) -- "You Stupid Darkness"
+Copyright (C) 2017 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin15.6.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[R.app GUI 1.70 (7338) x86_64-apple-darwin15.6.0]
+
+[History restored from /Users/jdreben/.Rapp.history]
+
+> install.packages('rgdal', type = "source", configure.args=c('--with-proj-include=/usr/local/include','--with-proj-lib=/usr/local/lib'))
+--- Please select a CRAN mirror for use in this session ---
+trying URL 'https://cran.mtu.edu/src/contrib/rgdal_1.2-7.tar.gz'
+Content type 'application/x-gzip' length 1653897 bytes (1.6 MB)
+==================================================
+downloaded 1.6 MB
+
+* installing *source* package ‘rgdal’ ...
+** package ‘rgdal’ successfully unpacked and MD5 sums checked
+configure: CC: clang
+configure: CXX: clang++
+configure: rgdal: 1.2-7
+checking for /usr/bin/svnversion... yes
+configure: svn revision: 660
+checking for gdal-config... /usr/local/bin/gdal-config
+checking gdal-config usability... yes
+configure: GDAL: 1.11.5
+checking GDAL version >= 1.6.3... yes
+checking for gcc... clang
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether clang accepts -g... yes
+checking for clang option to accept ISO C89... none needed
+checking how to run the C preprocessor... clang -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... rm: conftest.dSYM: is a directoryrm: conftest.dSYM: is a directory
+yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking gdal.h usability... yes
+checking gdal.h presence... yes
+checking for gdal.h... yes
+checking gdal: linking with --libs only... yes
+checking GDAL: /usr/local/Cellar/gdal/1.11.5_2/share/gdal/pcs.csv readable... yes
+checking proj_api.h usability... yes
+checking proj_api.h presence... yes
+checking for proj_api.h... yes
+checking for pj_init_plus in -lproj... yes
+configure: PROJ.4 version: > 4.8.0
+checking PROJ.4: epsg found and readable... yes
+checking PROJ.4: conus found and readable... yes
+configure: Package CPP flags:  -I/usr/local/Cellar/gdal/1.11.5_2/include -I/usr/local/include
+configure: Package LIBS:  -L/usr/local/Cellar/gdal/1.11.5_2/lib -lgdal -L/usr/local/lib -lproj
+configure: creating ./config.status
+config.status: creating src/Makevars
+** libs
+clang++  -I/Library/Frameworks/R.framework/Resources/include -DNDEBUG -I/usr/local/Cellar/gdal/1.11.5_2/include -I/usr/local/include -I"/Library/Frameworks/R.framework/Versions/3.4/Resources/library/sp/include" -I/usr/local/include   -fPIC  -Wall -g -O2  -c OGR_write.cpp -o OGR_write.o
+clang++  -I/Library/Frameworks/R.framework/Resources/include -DNDEBUG -I/usr/local/Cellar/gdal/1.11.5_2/include -I/usr/local/include -I"/Library/Frameworks/R.framework/Versions/3.4/Resources/library/sp/include" -I/usr/local/include   -fPIC  -Wall -g -O2  -c gdal-bindings.cpp -o gdal-bindings.o
+clang -I/Library/Frameworks/R.framework/Resources/include -DNDEBUG -I/usr/local/Cellar/gdal/1.11.5_2/include -I/usr/local/include -I"/Library/Frameworks/R.framework/Versions/3.4/Resources/library/sp/include" -I/usr/local/include   -fPIC  -Wall -g -O2  -c init.c -o init.o
+clang -I/Library/Frameworks/R.framework/Resources/include -DNDEBUG -I/usr/local/Cellar/gdal/1.11.5_2/include -I/usr/local/include -I"/Library/Frameworks/R.framework/Versions/3.4/Resources/library/sp/include" -I/usr/local/include   -fPIC  -Wall -g -O2  -c inverser.c -o inverser.o
+clang -I/Library/Frameworks/R.framework/Resources/include -DNDEBUG -I/usr/local/Cellar/gdal/1.11.5_2/include -I/usr/local/include -I"/Library/Frameworks/R.framework/Versions/3.4/Resources/library/sp/include" -I/usr/local/include   -fPIC  -Wall -g -O2  -c local_stubs.c -o local_stubs.o
+clang++  -I/Library/Frameworks/R.framework/Resources/include -DNDEBUG -I/usr/local/Cellar/gdal/1.11.5_2/include -I/usr/local/include -I"/Library/Frameworks/R.framework/Versions/3.4/Resources/library/sp/include" -I/usr/local/include   -fPIC  -Wall -g -O2  -c ogr_geom.cpp -o ogr_geom.o
+clang -I/Library/Frameworks/R.framework/Resources/include -DNDEBUG -I/usr/local/Cellar/gdal/1.11.5_2/include -I/usr/local/include -I"/Library/Frameworks/R.framework/Versions/3.4/Resources/library/sp/include" -I/usr/local/include   -fPIC  -Wall -g -O2  -c ogr_polygons.c -o ogr_polygons.o
+clang++  -I/Library/Frameworks/R.framework/Resources/include -DNDEBUG -I/usr/local/Cellar/gdal/1.11.5_2/include -I/usr/local/include -I"/Library/Frameworks/R.framework/Versions/3.4/Resources/library/sp/include" -I/usr/local/include   -fPIC  -Wall -g -O2  -c ogr_proj.cpp -o ogr_proj.o
+clang++  -I/Library/Frameworks/R.framework/Resources/include -DNDEBUG -I/usr/local/Cellar/gdal/1.11.5_2/include -I/usr/local/include -I"/Library/Frameworks/R.framework/Versions/3.4/Resources/library/sp/include" -I/usr/local/include   -fPIC  -Wall -g -O2  -c ogrdrivers.cpp -o ogrdrivers.o
+clang++  -I/Library/Frameworks/R.framework/Resources/include -DNDEBUG -I/usr/local/Cellar/gdal/1.11.5_2/include -I/usr/local/include -I"/Library/Frameworks/R.framework/Versions/3.4/Resources/library/sp/include" -I/usr/local/include   -fPIC  -Wall -g -O2  -c ogrsource.cpp -o ogrsource.o
+ogrsource.cpp:642:12: warning: unused variable 'DINT_MAX' [-Wunused-variable]
+    double DINT_MAX = 2251799813685248.0;
+           ^
+ogrsource.cpp:643:12: warning: unused variable 'DINT_MIN' [-Wunused-variable]
+    double DINT_MIN = -2251799813685248.0;
+           ^
+2 warnings generated.
+clang++  -I/Library/Frameworks/R.framework/Resources/include -DNDEBUG -I/usr/local/Cellar/gdal/1.11.5_2/include -I/usr/local/include -I"/Library/Frameworks/R.framework/Versions/3.4/Resources/library/sp/include" -I/usr/local/include   -fPIC  -Wall -g -O2  -c projectit.cpp -o projectit.o
+clang++ -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -single_module -multiply_defined suppress -L/Library/Frameworks/R.framework/Resources/lib -L/usr/local/lib -o rgdal.so OGR_write.o gdal-bindings.o init.o inverser.o local_stubs.o ogr_geom.o ogr_polygons.o ogr_proj.o ogrdrivers.o ogrsource.o projectit.o -L/usr/local/Cellar/gdal/1.11.5_2/lib -lgdal -L/usr/local/lib -lproj -F/Library/Frameworks/R.framework/.. -framework R -Wl,-framework -Wl,CoreFoundation
+installing to /Library/Frameworks/R.framework/Versions/3.4/Resources/library/rgdal/libs
+** R
+** data
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (rgdal)
+
+The downloaded source packages are in
+	‘/private/var/folders/4v/cr5n4s6x0pdbwbfh2fxw99xc0000gq/T/RtmpZ83FlO/downloaded_packages’
+> library('rgdal')
+Loading required package: sp
+rgdal: version: 1.2-7, (SVN revision 660)
+ Geospatial Data Abstraction Library extensions to R successfully loaded
+ Loaded GDAL runtime: GDAL 1.11.5, released 2016/07/01
+ Path to GDAL shared files: /usr/local/Cellar/gdal/1.11.5_2/share/gdal
+ Loaded PROJ.4 runtime: Rel. 4.9.3, 15 August 2016, [PJ_VERSION: 493]
+ Path to PROJ.4 shared files: (autodetected)
+ Linking to sp version: 1.2-4 
+> install.packages('sp')
+trying URL 'https://cran.mtu.edu/bin/macosx/el-capitan/contrib/3.4/sp_1.2-4.tgz'
+Content type 'application/x-gzip' length 1543456 bytes (1.5 MB)
+==================================================
+downloaded 1.5 MB
+
+
+The downloaded binary packages are in
+	/var/folders/4v/cr5n4s6x0pdbwbfh2fxw99xc0000gq/T//RtmpZ83FlO/downloaded_packages
+> library('sp')
+> library('rgdal')
+> install.packages('tigris')
+trying URL 'https://cran.mtu.edu/bin/macosx/el-capitan/contrib/3.4/tigris_0.3.3.tgz'
+Content type 'application/x-gzip' length 173366 bytes (169 KB)
+==================================================
+downloaded 169 KB
+
+
+The downloaded binary packages are in
+	/var/folders/4v/cr5n4s6x0pdbwbfh2fxw99xc0000gq/T//RtmpZ83FlO/downloaded_packages
+> library('tigris')
+
+Attaching package: ‘tigris’
+
+The following object is masked from ‘package:graphics’:
+
+    plot
+
+> ua <- urban_areas(cb = TRUE)
+  |================================================================================================================| 100%
+> install.packages(ggmap)
+Error in install.packages(ggmap) : object 'ggmap' not found
+> install.packages('ggmap')
+trying URL 'https://cran.mtu.edu/bin/macosx/el-capitan/contrib/3.4/ggmap_2.6.1.tgz'
+Content type 'application/x-gzip' length 4565845 bytes (4.4 MB)
+==================================================
+downloaded 4.4 MB
+
+
+The downloaded binary packages are in
+	/var/folders/4v/cr5n4s6x0pdbwbfh2fxw99xc0000gq/T//RtmpZ83FlO/downloaded_packages
+> nyc_map <- ggmap::get_map(location = c(lon = -74.00, lat = 40.71), maptype = "terrain", zoom = 11)
+Map from URL : http://maps.googleapis.com/maps/api/staticmap?center=40.71,-74&zoom=11&size=640x640&scale=2&maptype=terrain&language=en-EN&sensor=false
+> ggmap(nyc_map)
+Error in ggmap(nyc_map) : could not find function "ggmap"
+> ggmap::ggmap(nyc_map)
+> install.packages('leaflet')
+trying URL 'https://cran.mtu.edu/bin/macosx/el-capitan/contrib/3.4/leaflet_1.1.0.tgz'
+Content type 'application/x-gzip' length 2509954 bytes (2.4 MB)
+==================================================
+downloaded 2.4 MB
+
+
+The downloaded binary packages are in
+	/var/folders/4v/cr5n4s6x0pdbwbfh2fxw99xc0000gq/T//RtmpZ83FlO/downloaded_packages
+> leaflet()
+Error in leaflet() : could not find function "leaflet"
+> leaflet::leaflet()
+> leaflet::addTiles()
+Error in getMapData(map) : argument "map" is missing, with no default
+> leaflet::addTiles(nyc_map)
+Error in map$x : $ operator is invalid for atomic vectors
+> tigris::lookup_code("New York", "New York")
+[1] "The code for New York is '36' and the code for New York County is '061'."
+> nyc_tracts <- tracts(state = '36', county = c('061','047','081','005','085'))
+  |================================================================================================================| 100%
+> summary(nyc_tracts)
+Object of class SpatialPolygonsDataFrame
+Coordinates:
+        min       max
+x -74.25909 -73.70001
+y  40.47740  40.91758
+Is projected: FALSE 
+proj4string :
+[+proj=longlat +datum=NAD83 +no_defs +ellps=GRS80 +towgs84=0,0,0]
+Data attributes:
+   STATEFP            COUNTYFP           TRACTCE             GEOID               NAME             NAMELSAD        
+ Length:2167        Length:2167        Length:2167        Length:2167        Length:2167        Length:2167       
+ Class :character   Class :character   Class :character   Class :character   Class :character   Class :character  
+ Mode  :character   Mode  :character   Mode  :character   Mode  :character   Mode  :character   Mode  :character  
+                                                                                                                  
+                                                                                                                  
+                                                                                                                  
+    MTFCC             FUNCSTAT             ALAND              AWATER            INTPTLAT           INTPTLON        
+ Length:2167        Length:2167        Min.   :       0   Min.   :        0   Length:2167        Length:2167       
+ Class :character   Class :character   1st Qu.:  156383   1st Qu.:        0   Class :character   Class :character  
+ Mode  :character   Mode  :character   Median :  184733   Median :        0   Mode  :character   Mode  :character  
+                                       Mean   :  360310   Mean   :   199280                                        
+                                       3rd Qu.:  291132   3rd Qu.:        0                                        
+                                       Max.   :18319107   Max.   :121773132                                        
+> plot(nyc_tracts)
+Error in polypath(x = mcrds[, 1], y = mcrds[, 2], border = border, col = col,  : 
+  plot.new has not been called yet
+> plot(nyc_tracts)
+> ggmap::ggmap(nyc_map) + ggmap::geom_polygon(data=nyc_tracts, aes(x=long, y=lat, group=group), color="blue", fill=NA)
+Error: 'geom_polygon' is not an exported object from 'namespace:ggmap'
+> ggmap::ggmap(nyc_map) + geom_polygon(data=nyc_tracts, aes(x=long, y=lat, group=group), color="blue", fill=NA)
+Error in geom_polygon(data = nyc_tracts, aes(x = long, y = lat, group = group),  : 
+  could not find function "geom_polygon"
+> install.packages('maptools')
+trying URL 'https://cran.mtu.edu/bin/macosx/el-capitan/contrib/3.4/maptools_0.9-2.tgz'
+Content type 'application/x-gzip' length 1824217 bytes (1.7 MB)
+==================================================
+downloaded 1.7 MB
+
+
+The downloaded binary packages are in
+	/var/folders/4v/cr5n4s6x0pdbwbfh2fxw99xc0000gq/T//RtmpZ83FlO/downloaded_packages
+> 
